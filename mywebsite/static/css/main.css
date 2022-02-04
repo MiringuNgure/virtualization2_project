@@ -1,0 +1,24 @@
+#main {
+    padding-top: 74px;
+  }
+@media (min-width: 992px) {
+    #main {
+      padding-top: 104px;
+    }
+}
+
+@font-face{
+  font-family: "Virtualization Project Font";
+  src: 
+  url("fonts/kaushanscript-regular-webfont.woff") format("woff"),
+  url("fonts/kaushanscript-regular-webfont.otf") format("opentype");
+}
+
+.navbar-brand{
+
+  font-family: "Virtualization Project Font";
+
+}
+.hs-bg-primary{
+  background-color: rgb(55, 226, 21);
+}

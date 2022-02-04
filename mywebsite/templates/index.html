@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block title%}Airport Metar Data Scrapper Project{% endblock%}
+
+{% block content %}
+<!-- <img class="masthead-avatar mb-5" src="{% static 'theme/assets/img/avataaars.svg' %}" alt="..." /> -->
+
+<head>
+    <title> Airport Metar Data Scrapper Project</title>
+</head>
+
+<link rel="stylesheet" href="{% static 'theme/css/styles.css' %}">
+
+<body style="background-image: url('{% static 'theme/assets/img/chairs.jpg' %}'); background-repeat: no-repeat; background-size: 100%">
+
+    <center>
+        <h1> Airport Data Website</h1>
+        <h2> Django webapp using PostgreSQL, Docker, and Beautiful Soup</h2>
+        <hr/>
+        <table border="1">
+            <tr>
+                <th>name</th>
+                <th>airport_code</th>
+                <th>temperature</th>
+                <th>dewpoint</th>
+                <th>pressure</th>
+                <th>winds</th>
+                <th>visibility</th>
+                <th>ceiling</th>
+                <th>clouds</th>
+            </tr>
+            {% for results in data%}
+            <tr>
+                <td>{{results.name}}</td>
+                <td>{{results.airport_code}}</td>
+                <td>{{results.temperature}}</td>
+                <td>{{results.dewpoint}}</td>
+                <td>{{results.pressure}}</td>
+                <td>{{results.winds}}</td>
+                <td>{{results.visibility}}</td>
+                <td>{{results.ceiling}}</td>
+                <td>{{results.clouds}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+
+{% endblock %}

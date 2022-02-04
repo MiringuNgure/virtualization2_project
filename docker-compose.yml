@@ -1,0 +1,64 @@
+version: '3.7'
+
+x-service-volumes: &service-volumes
+  - ./:/app/:rw,cached
+
+x-database-variables: &database-variables
+  POSTGRES_DB: postgres
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+
+x-app-variables: &app-variables
+  <<: *database-variables
+  POSTGRES_HOST: postgres
+
+
+services:
+  
+  website:
+    
+    image: mywebsite
+    container_name: website_project
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes: *service-volumes
+    environment: *app-variables
+    depends_on:
+      - db-migrate
+    ports:
+      - "8000:8000"
+  
+  db-migrate:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: mywebsite
+    command: python manage.py migrate
+    volumes: *service-volumes
+    environment: *app-variables
+    depends_on:
+      - collector_app
+  
+  postgres:
+    image: postgres
+    container_name: postgresdb
+    environment: *database-variables
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  
+  collector_app:
+    build: 
+      context: .
+      dockerfile: collector/Dockerfile
+    image: collector_image
+    #command: tail -F anything
+    command: python collector.py
+    depends_on:
+      - postgres
+    ports:
+      - 8001:8001
+
+volumes:
+  db-data:
+

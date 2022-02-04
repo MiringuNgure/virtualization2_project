@@ -1,0 +1,8 @@
+id,name,airport_code,temperature,dewpoint,pressure,winds,visibility,ceiling,clouds
+0,Dusseldorf,EDDL,  4.0°C ( 39°F),  1.0°C ( 34°F) [RH =  81%],30.68 inches Hg (1039.0 mb),from the SSW (200 degrees) at   5 MPH (4 knots;  2.1 m/s),6 or more sm (10+ km),ceiling and visibility are OK,unknown
+1,Frankfurt,EDDF,  1.0°C ( 34°F),  0.0°C ( 32°F) [RH =  93%],30.71 inches Hg (1040.0 mb),from the SW (230 degrees) at   3 MPH (3 knots;  1.5 m/s),6 or more sm (10+ km),600 feet AGL, overcast cloud deck at 600 feet AGL
+2,Tokyo,RJAA,  2.0°C ( 36°F), -6.0°C ( 21°F) [RH =  55%],29.59 inches Hg (1002.0 mb),from the NW (320 degrees) at  12 MPH (10 knots;  5.1 m/s),6 or more sm (10+ km),10000 feet AGL," few clouds at 3000 feet AGL, broken clouds at 10000 feet AGL"
+3,Buenos Aires,SAEZ, 36.0°C ( 97°F),  8.0°C ( 46°F) [RH =  18%],29.91 inches Hg (1013.0 mb),from the ENE (70 degrees) at  12 MPH (10 knots;  5.1 m/s),6 or more sm (10+ km),ceiling and visibility are OK,unknown
+4,Vancouver,CYVR,  7.0°C ( 45°F),  6.0°C ( 43°F) [RH =  93%],30.08 inches Hg (1018.7 mb) [Sea level pressure: 1018.7 mb],variable direction winds at   2 MPH (2 knots;  1.0 m/s), 20 sm ( 32 km),4700 feet AGL, overcast cloud deck at 4700 feet AGL
+5,Longyearbyen,ENSB, -3.0°C ( 27°F), -8.0°C ( 18°F) [RH =  68%],28.76 inches Hg ( 974.0 mb),from the ESE (110 degrees) at  22 MPH (19 knots;  9.8 m/s),6 or more sm (10+ km),"at least 12,000 feet AGL"," few clouds at 4000 feet AGL, scattered clouds at 10000 feet AGL"
+6,Goose Bay,CYYR,-21.0°C ( -6°F),-28.0°C (-18°F) [RH =  53%],30.19 inches Hg (1022.4 mb) [Sea level pressure: 1023.1 mb],from the ESE (110 degrees) at   3 MPH (3 knots;  1.5 m/s), 15 sm ( 24 km),"at least 12,000 feet AGL",clear skies
